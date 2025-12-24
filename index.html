@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dila — Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"Inter",sans-serif;
+  background:#f7f4ee;
+  color:#2b2b2b;
+}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  top:30px;
+  left:50%;
+  transform:translateX(-50%);
+  background:rgba(255,255,255,0.75);
+  backdrop-filter:blur(12px);
+  padding:14px 40px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  gap:40px;
+  z-index:10;
+  box-shadow:0 10px 40px rgba(0,0,0,0.08);
+}
+
+.navbar a{
+  text-decoration:none;
+  font-size:14px;
+  color:#2b2b2b;
+  transition:.3s;
+}
+
+.navbar a:hover{
+  color:#c9a27c;
+}
+
+.logo{
+  font-weight:600;
+  color:#c9a27c;
+}
+
+/* LAYOUT */
+.wrapper{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+}
+
+/* LEFT */
+.left{
+  padding:140px 90px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.year{
+  font-size:14px;
+  letter-spacing:2px;
+  color:#c9a27c;
+  margin-bottom:40px;
+}
+
+.title{
+  font-family:"Playfair Display",serif;
+  font-size:64px;
+  line-height:1.05;
+  font-weight:700;
+  margin-bottom:40px;
+}
+
+.text{
+  max-width:420px;
+  font-size:15px;
+  line-height:1.8;
+  color:#555;
+  margin-bottom:50px;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 34px;
+  background:#e7c4a1;
+  border-radius:999px;
+  text-decoration:none;
+  color:#3b2c22;
+  font-size:14px;
+  font-weight:500;
+}
+
+/* RIGHT */
+.right{
+  position:relative;
+  background:#f2e3d3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-img{
+  width:78%;
+  height:88vh;              
+  max-height:820px;         
+  border-radius:14px;
+  background-image:url(profil.jpeg);
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  box-shadow:0 40px 90px rgba(0,0,0,.15);
+}
+
+
+/* Nude blocks */
+.right::before{
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:120px;
+  background:#e7c4a1;
+  z-index:-1;
+}
+
+.right::after{
+  content:"";
+  position:absolute;
+  top:0;
+  right:0;
+  width:120px;
+  height:100%;
+  background:#e7c4a1;
+  z-index:-1;
+}
+
+/* SECTIONS */
+.section{
+  margin-top:80px;
+}
+
+.section h2{
+  font-family:"Playfair Display",serif;
+  font-size:28px;
+  margin-bottom:20px;
+}
+
+.list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+}
+
+.tag{
+  padding:10px 18px;
+  background:#e7d8c9;
+  border-radius:999px;
+  font-size:13px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .wrapper{
+    grid-template-columns:1fr;
+  }
+  .left{
+    padding:120px 40px;
+  }
+  .title{
+    font-size:48px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="navbar">
+  <div class="logo">Home</div>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="wrapper">
+
+  <!-- LEFT -->
+  <div class="left">
+
+    <div class="year">✦ — 2025</div>
+
+    <h1 class="title">
+      Dila<br>
+      Frontend & UI
+    </h1>
+
+    <p class="text">
+      Mahasiswa Informatika yang fokus membangun tampilan web
+      yang clean, modern, dan estetik dengan pendekatan desain premium.
+    </p>
+
+    <a href="#contact" class="btn">Let’s work together</a>
+
+    <div id="about" class="section">
+      <h2>About</h2>
+      <p class="text">
+        Saya Dila, tertarik pada frontend development dan UI design.
+        Saya membangun website dengan fokus pada struktur yang rapi,
+        visual yang bersih, dan pengalaman pengguna yang nyaman.
+      </p>
+    </div>
+
+    <div id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="list">
+        <div class="tag">HTML5</div>
+        <div class="tag">CSS3</div>
+        <div class="tag">Responsive Design</div>
+        <div class="tag">UI Layout</div>
+        <div class="tag">Basic JavaScript</div>
+      </div>
+    </div>
+
+    <div id="contact" class="section">
+      <h2>Contact</h2>
+      <p class="text">
+        Email: dilaa.mnfiatul13@example.com<br>
+        WhatsApp: 0821-1548-9046
+      </p>
+    </div>
+
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+    <div class="hero-img"></div>
+  </div>
+
+</div>
+
+</body>
+</html>
