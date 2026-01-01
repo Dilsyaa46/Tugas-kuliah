@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter', sans-serif;
+  background:#f6f1ec;
+  color:#1c1c1c;
+}
+
+/* NAVBAR */
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 50px;
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(20px);
+  box-shadow:0 10px 40px rgba(0,0,0,0.05);
+}
+
+/* LOGO */
+.logo a{
+  font-family:'Playfair Display', serif;
+  font-size:22px;
+  text-decoration:none;
+  color:#1c1c1c;
+}
+
+/* MAIN MENU */
+.main-menu{
+  list-style:none;
+  display:flex;
+  gap:30px;
+  align-items:center;
+}
+
+.main-menu li{
+  position:relative;
+}
+
+.main-menu a{
+  text-decoration:none;
+  font-size:14px;
+  font-weight:500;
+  color:#1c1c1c;
+  padding:8px 0;
+  transition:0.3s ease;
+}
+
+.main-menu a:hover{
+  color:#b38a64;
+}
+
+/* DROPDOWN */
+.submenu{
+  position:absolute;
+  top:140%;
+  left:0;
+  min-width:200px;
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(20px);
+  border-radius:18px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.08);
+  list-style:none;
+  padding:12px 0;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(10px);
+  transition:0.3s ease;
+}
+
+.submenu li a{
+  display:block;
+  padding:12px 22px;
+  font-size:13px;
+  color:#1c1c1c;
+}
+
+.submenu li a:hover{
+  background:#f0e1d5;
+}
+
+/* SHOW DROPDOWN */
+.dropdown-parent:hover .submenu{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+
+/* CTA BUTTON */
+.nav-cta .cta-button{
+  text-decoration:none;
+  padding:12px 28px;
+  background:#c9a27c;
+  color:white;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:500;
+  transition:0.3s ease;
+}
+
+.nav-cta .cta-button:hover{
+  background:#b38a64;
+  transform:translateY(-2px);
+}
+
+/* MAIN */
+main{
+  padding:80px 60px;
+}
+
+main h1{
+  font-family:'Playfair Display', serif;
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+main p{
+  max-width:500px;
+  line-height:1.7;
+  color:#555;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+  .navbar{
+    flex-wrap:wrap;
+    padding:20px 30px;
+  }
+
+  .main-menu{
+    width:100%;
+    justify-content:center;
+    margin-top:15px;
+  }
+
+  .nav-cta{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-top:15px;
+  }
+}
