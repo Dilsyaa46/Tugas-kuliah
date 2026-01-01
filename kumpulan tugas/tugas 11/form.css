@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f6f1ec;
+  color: #1c1c1c;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD */
+.form-container {
+  width: 100%;
+  max-width: 720px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(20px);
+  padding: 60px;
+  border-radius: 40px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.08);
+}
+
+/* TITLES */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: #666;
+}
+
+/* SEPARATOR */
+hr {
+  border: none;
+  height: 1px;
+  background: rgba(0,0,0,0.08);
+  margin: 40px 0;
+}
+
+/* LABEL */
+label {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #666;
+}
+
+/* INPUT GLOBAL */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 20px;
+  border: none;
+  margin-top: 8px;
+  margin-bottom: 24px;
+  background: #f3e9e2;
+  font-size: 14px;
+  outline: none;
+  transition: .3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  background: #ead6c7;
+}
+
+/* RADIO & CHECKBOX */
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+  accent-color: #c7a38a;
+}
+
+/* FILE INPUT */
+input[type="file"] {
+  background: transparent;
+  padding: 0;
+}
+
+/* COLOR */
+input[type="color"] {
+  height: 50px;
+  border-radius: 12px;
+  padding: 4px;
+}
+
+/* BUTTON */
+button {
+  padding: 14px 36px;
+  border-radius: 40px;
+  border: none;
+  background: #e7cfc1;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .4s;
+  margin-right: 12px;
+}
+
+button:hover {
+  background: #d8b9a7;
+}
+
+/* FORM INLINE (STRUKTUR FORM DASAR) */
+form {
+  display: flex;
+  gap: 16px;
+}
